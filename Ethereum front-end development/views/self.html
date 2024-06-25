@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>个人中心</title>
+  <link rel="stylesheet" href="../lib/layui/css/layui.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/form.css">
+</head>
+
+<body>
+  <div class="header container">个人中心
+    <p style="display: block;">
+      <a href="./rpwd.html">修改密码</a>
+      <a href="./index.html">回到首页</a>
+    </p>
+  </div>
+  <form>
+    <label>
+      用户名： <input type="text" class="username" name="username" lay-verify="required" disabled>
+    </label>
+    <label>
+      年龄： <input type="text" name="age" lay-verify="required" class="age">
+    </label>
+    <label>
+      性别： <select class='gender' name="gender" lay-verify="required">
+        <option value="">请选择</option>
+        <option value="男">男</option>
+        <option value="女">女</option>
+      </select>
+    </label>
+    <label>
+      昵称： <input type="text" name="nickname" lay-verify="required" class="nickname">
+    </label>
+    <button lay-submit lay-filter="update">确认修改</button>
+  </form>
+  <script src="../lib/layui/layui.js"></script>
+  <script src="../lib/axios.js"></script>
+  <script src="../js/https.js"></script>
+  <script src="../js/self.js"></script>
+</body>
+
+</html>
